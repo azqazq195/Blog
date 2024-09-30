@@ -51,7 +51,7 @@ params:
     base: "https://github.com/azqazq195/blog/edit/main/content"
   
   comments:
-    enable: true
+    enable: false
     type: giscus
 
     giscus:
