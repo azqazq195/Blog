@@ -3,5 +3,9 @@ public/
 resources/
 .hugo_build.lock
 
+# Mac OS
+.DS_STORE
+
 # Editor
 .vscode/
+.idea/

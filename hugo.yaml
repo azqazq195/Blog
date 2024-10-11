@@ -21,21 +21,24 @@ enableInlineShortcodes: true
 
 menu:
   main:
-    - name: Docs
-      pageRef: /docs
+    - name: Post
+      pageRef: /post
       weight: 1
+    - name: Issue
+      pageRef: /issue
+      weight: 2
     - name: About
       pageRef: /about
-      weight: 2
+      weight: 3
     - name: Contact ↗
       url: "https://github.com/azqazq195"
-      weight: 3
-    - name: Search
       weight: 4
+    - name: Search
+      weight: 5
       params:
         type: search
     - name: GitHub
-      weight: 5
+      weight: 6
       url: "https://github.com/azqazq195"
       params:
         icon: github
