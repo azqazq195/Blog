@@ -29,6 +29,8 @@ Signed URL을 생성해야하는 문제가 발생할 수 있습니다. 반면에
 
 ## 테스트
 
+{{% steps %}}
+
 ### RSA 키 생성
 
 CloudFront에서 키를 생성해주지는 않으므로 먼저 RSA 키를 일단 생성해줍니다.
@@ -135,6 +137,8 @@ public class Main {
 }
 ```
 
+{{% / steps %}}
+
 Intellij의 http 파일로 실행 시켜보겠습니다.
 
 ```java
@@ -183,24 +187,35 @@ SSL 적용이후 웹 페이지에서 이미지가 잘 나오는지 확인합니�
 
 위의 문제로 운영이 중단되지 않고 배포하기 위해 아래 순서를 따라야 합니다.
 
-1. S3 Public 액세스 허용 (기존 설정)
+#### 제한사항
 
-   새로운 도메인으로 CloudFront 설정 추가
+기존 S3는 Public 접근이 허용되어 있는 상태입니다.
 
-    - 대체 도메인 설정, SSL 설정
-1. CloudFront URL 에 동작 추가
-    - `/static/*` 등 제한 없는 동작 추가
-    - Default 경로에는 '뷰어 액세스 제한' 추가
+{{% steps %}}
 
-   CloudFront URL에는 이제 Signed Cookie로 접근해야하지만 여전히 S3 URL은 Public 이므로 문제 없음.
+### 새로운 도메인으로 CloudFront 설정 추가
 
-1. Signed Cookie 발급 백엔드 코드 추가
+- 새로운 도메인으로 대체 도메인 설정
+- SSL 설정 (`us-east-1`에서 발급)
 
-   배포 이후 테스트 계정의 프로필 url을 CloudFront URL 로 변경하여 확인합니다.
+### CloudFront URL 에 동작 추가
 
-1. URL 저장시 CloudFront URL로 변경하는 백엔드 코드 추가
-2. 데이터 베이스 마이그레이션 (S3 URL → CloudFront URL)
-3. S3 Public 액세스 비활성화
+- `/static/*` 등 제한 없는 동작 추가
+- Default 경로에는 '뷰어 액세스 제한' 추가
+
+CloudFront URL에는 이제 Signed Cookie로 접근해야하지만 여전히 S3 URL은 Public 이므로 문제 없음.
+
+### Signed Cookie 발급 백엔드 코드 추가
+
+배포 이후 테스트 계정의 프로필 url을 CloudFront URL 로 변경하여 확인합니다.
+
+### URL 저장시 CloudFront URL로 변경하는 백엔드 코드 추가
+
+### 데이터 베이스 마이그레이션 (S3 URL → CloudFront URL)
+
+### S3 Public 액세스 비활성화
+
+{{% / steps %}}
 
 ## 추가) CloudFront 에러 페이지 커스텀
 
