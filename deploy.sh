@@ -12,5 +12,4 @@ for item in "${ignore[@]}"; do
     rsync_exclude+="--exclude=$item "
 done
 
-
-rsync -av --delete $rsync_exclude "$VAULT_DIR" ./content
+rsync -av --delete "$rsync_exclude" "$VAULT_DIR" ./content

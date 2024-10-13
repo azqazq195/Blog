@@ -1,6 +1,6 @@
 # Hugo configuration file
 baseURL: "https://blog.moseoh.com"
-title: Seongha.moon
+title: Moseoh
 
 enableRobotsTXT: true
 enableGitInfo: true
@@ -21,24 +21,18 @@ enableInlineShortcodes: true
 
 menu:
   main:
-    - name: Post
-      pageRef: /post
+    - name: Posts
+      pageRef: /posts
       weight: 1
     - name: Issue
       pageRef: /issue
       weight: 2
-    - name: About
-      pageRef: /about
-      weight: 3
-    - name: Contact ↗
-      url: "https://github.com/azqazq195"
-      weight: 4
     - name: Search
-      weight: 5
+      weight: 3
       params:
         type: search
     - name: GitHub
-      weight: 6
+      weight: 4
       url: "https://github.com/azqazq195"
       params:
         icon: github
@@ -49,32 +43,36 @@ menu:
       params:
         type: separator
       weight: 1
-    - identifier: about
-      name: "About"
-      pageRef: "/about"
-      weight: 2
-    - identifier: hugoDocs
+    - identifier: github
       name: "Github ↗"
       url: "https://github.com/azqazq195"
-      weight: 3
+      weight: 2
 
 params:
-  description: Seongha.moon’s Backend Development Blog
+  description: Moseoh’s Backend Development Blog
+  highlight:
+    copy:
+      enable: true
+      display: always # hover | always
   
   navbar:
+    width: wide
     displayTitle: true
-    displayLogo: true
+    displayLogo: false
     # logo:
     #   path: images/logo.svg
     #   dark: images/logo-dark.svg
     #   # width: 40
     #   # height: 20
     #   # link: /
-    width: wide
 
+  # full (100%), wide (90rem), normal (1280px)
   page:
-    # full (100%), wide (90rem), normal (1280px)
     width: wide
+  footer:
+    width: wide
+    displayCopyright: true
+    displayPoweredBy: true
 
   theme:
     # light | dark | system
@@ -94,10 +92,6 @@ params:
     list:
       displayTags: true
 
-  footer:
-    displayCopyright: true
-    displayPoweredBy: true
-
   editURL:
     enable: false
     base: "https://github.com/azqazq195/blog/edit/main/content"
@@ -113,6 +107,7 @@ params:
       categoryId: DIC_kwDOM44H0c4Ci67D
 
 defaultContentLanguage: ko
+
 languages:
   ko:
     languageName: 한국어
@@ -122,3 +117,9 @@ languages:
     languageName: English
     languageCode: en
     weight: 2
+
+sitemap:
+  changeFreq: ""
+  disable: false
+  filename: sitemap.xml
+  priority: -1

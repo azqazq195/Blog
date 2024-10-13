@@ -1,3 +1,10 @@
+---
+title: Domain Redirect
+type: docs
+sidebar:
+open: open
+---
+
 ## 문제
 
 `*.sample.io` 에서 운영 중인 서비스를 `*.sample.com` 으로 리다이렉션 구성하고 추후 `*.sample.io` 를 제거하는 과정이 필요했습니다.

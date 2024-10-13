@@ -1,8 +1,7 @@
 ---
-title: Folder
+title: Github
 type: docs
-prev: docs/first-page
-next: docs/folder/leaf
+comments: false
 sidebar:
   open: open
 ---
