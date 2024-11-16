@@ -1,6 +1,7 @@
 ---
 title: Moseoh
 layout: hextra-home
+width: wide
 ---
 
 {{< hextra/hero-badge >}}
@@ -46,6 +47,4 @@ icon="warning"
 subtitle="백엔드 및 데브옵스 작업 중 발생한 문제와 해결 방안 기록."
 style="background: radial-gradient(ellipse at 50% 80%,rgba(221,210,59,0.15),hsla(0,0%,100%,0));"
 >}}
-
 {{< /hextra/feature-grid >}}
-

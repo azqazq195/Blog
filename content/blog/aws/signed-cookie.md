@@ -1,8 +1,10 @@
 ---
-title: S3 보안조치 (CloudFront Signed Cookie)
-type: docs
-sidebar:
-  open: open
+title: Signed Cookie
+type: blog
+date: 2024-11-02
+tags:
+  - aws
+  - s3
 ---
 
 ## 문제
@@ -12,11 +14,11 @@ S3에서 컨텐츠를 제공하는 URL에 있어서 S3의 정적 URL을 숨겨�
 S3 URL 보안조치에는 세가지 방법이 존재합니다.
 
 - Pre-signed URL (S3)
-    - 단일 S3 객체에 대한 임시 접근
+  - 단일 S3 객체에 대한 임시 접근
 - Signed URL (CloudFront)
-    - CloudFront를 통해 특정 리소스에 대한 접근
+  - CloudFront를 통해 특정 리소스에 대한 접근
 - Signed Cookie (CloudFront)
-    - CloudFront를 통해 여러 리소스에 대해 쿠키를 통해 접근 제어
+  - CloudFront를 통해 여러 리소스에 대해 쿠키를 통해 접근 제어
 
 Pre-signed URL은 클라이언트가 서버를 거치지 않고 S3로 직접 파일을 업로드할 수 있도록 할 때, 자주 사용됩니다. 서버는 클라이언트에게 Pre-signed URL을 생성해 제공하고, 클라이언트는 이
 URL을 통해 지정된 시간 동안 S3에 파일을 안전하게 업로드할 수 있습니다.
@@ -56,7 +58,7 @@ openssl rsa -in private_key.pem -pubout -out public_key.pem
 
 - my-test-bucket
 - 모든 퍼블릭 액세스 차단
-    - CloudFront 만으로 접근할 수 있도록 액세스 차단
+  - CloudFront 만으로 접근할 수 있도록 액세스 차단
 
 ### CloudFront 배포
 
@@ -66,12 +68,12 @@ openssl rsa -in private_key.pem -pubout -out public_key.pem
 대체 도메인을 사용한다면?
 
 1. 대체 도메인 SSL 발급 및 설정
-    - ACM us-east-1 에서 발급 받은 인증서만 적용 가능
-    - sample.com, *.sample.com (혹은 cdn.sample.com)
+   - ACM us-east-1 에서 발급 받은 인증서만 적용 가능
+   - sample.com, \*.sample.com (혹은 cdn.sample.com)
 1. 대체 도메인 설정
-    - cdn.sample.com
+   - cdn.sample.com
 1. Route53 Record 설정
-    - A Record cdn.sample.com
+   - A Record cdn.sample.com
 
 ### S3 정책 수정
 
@@ -233,7 +235,7 @@ CloudFront는 에러 발생시 특정 객체를 반환하도록 '오류 페이�
 
 ### CloudFront 에 연결된 S3에 `error.html` 파일 업로드
 
-`/static/error.html`  경로에 파일을 업로드 하였습니다.
+`/static/error.html` 경로에 파일을 업로드 하였습니다.
 
 ### CloudFront 에 동작 추가
 

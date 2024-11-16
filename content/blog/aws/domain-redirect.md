@@ -1,8 +1,11 @@
 ---
 title: Domain Redirect
-type: docs
-sidebar:
-open: open
+type: blog
+date: 2024-11-01
+tags:
+  - aws
+  - ec2
+  - alb
 ---
 
 ## 문제
@@ -47,18 +50,17 @@ EC2 > 로드 밸런서
 2. ALB(redirect-test-alb)를 생성하여 방금 생성한 target group을 대상으로 선택합니다.
 3. Route 53에서 해당 ALB를 A 레코드로 등록시킵니다.
    - 예를 들어 `test.sample.io` 로 연결한뒤 사이트에 접근한다면, `503 Service Temporarily Unavailable` 페이지가 나옵니다. 이는 target group에 인스턴스가 없어 표시되는 화면으로 정상적으로 등록되었음을 확인할 수 있습니다.
-1. ALB(redirect-test-alb)에서 '해결과정' 문서에 나와있는대로 Redirect 리스너 규칙을 추가합니다.
+4. ALB(redirect-test-alb)에서 '해결과정' 문서에 나와있는대로 Redirect 리스너 규칙을 추가합니다.
    - 여기서 저는 `test.sample.io` → `blog.moseoh.com` 제 블로그로 Redirect 설정하였습니다.
-1. 마지막으로 Redirect 설정을 해당 ALB에 추가하여 Redirect가 잘 수행되는지 확인합니다.
+5. 마지막으로 Redirect 설정을 해당 ALB에 추가하여 Redirect가 잘 수행되는지 확인합니다.
    - `test.sample.io` → `blog.moseoh.com`
    - `test.sample.io/docs` → `blog.moseoh.com/docs`
    - 명령어로 확인 `curl -Iv` [`http://test.sample.io`](http://test.sample.io)` -L`
 
 #### 테스트용 리소스 삭제 순서
 
-1. Route 53 > 호스팅 영역 > sample.io `test.sample.io`  삭제
+1. Route 53 > 호스팅 영역 > sample.io `test.sample.io` 삭제
 2. EC2 > 로드 밸런서> redirect-test-alb 삭제
 3. EC2 > 대상 그룹 > redirect-test-tg 삭제
 
 테스트가 성공적으로 마무리 되었다면, 이제 운영 환경에 그대로 적용하면 될 것 같습니다.
-

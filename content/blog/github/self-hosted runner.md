@@ -1,8 +1,10 @@
 ---
 title: self-hosted runner
-type: docs
-sidebar:
-  open: open
+type: blog
+date: 2024-11-01
+tags:
+  - github
+  - actions-runner
 ---
 
 안녕하세요 여러분,

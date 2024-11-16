@@ -1,6 +1,7 @@
 ---
 title: Moseoh
 layout: hextra-home
+width: wide
 ---
 
 {{< hextra/hero-badge >}}

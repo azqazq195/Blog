@@ -1,5 +1,5 @@
 ---
-title: Issue
+title: Blog
 comments: false
 type: blog
 ---
