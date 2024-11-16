@@ -16,6 +16,7 @@ type: blog
 date: $(date +%Y-%m-%d)
 tags: 
   - $TAG
+summary: ""
 ---
 EOF
 done

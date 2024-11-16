@@ -5,6 +5,7 @@ date: 2024-11-01
 tags:
   - github
   - actions-runner
+summary: "GitHub Actions의 self-hosted runner를 서버에 구성하는 방법을 설명합니다. 여러 개의 runner를 동일한 서버에서 운영할 때 필요한 설정 방법과 주의사항을 다룹니다. 특히 SELinux가 활성화된 환경에서의 설치 위치, 디렉토리 구성, runner 이름 설정 등 실제 구축 시 필요한 상세한 가이드를 제공합니다."
 ---
 
 안녕하세요 여러분,
