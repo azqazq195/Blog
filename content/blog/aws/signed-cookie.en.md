@@ -147,11 +147,11 @@ Cookie:CloudFront-Policy={Value};CloudFront-Signature={Value};CloudFront-Key-Pai
 
 When you access the signed URL, you can see that `sample.png` is displayed correctly.
 
-![](sample.png)
+![](images/blog/aws/signed-cookie/sample.png)
 
 If you refresh after 10 seconds, the signed URL will expire, resulting in `Access denied`.
 
-![](access_denied.png)
+![](images/blog/aws/signed-cookie/access_denied.png)
 
 ### Server Implementation
 
@@ -219,7 +219,7 @@ After deployment, change the profile URL of a test account to the CloudFront URL
 
 When accessing the URL without a cookie, the following screen appears. This is not a necessary screen for the user, so it needs to be replaced with another screen.
 
-![](missing_key.png)
+![](images/blog/aws/signed-cookie/missing_key.png)
 
 CloudFront provides an 'Error Pages' setting to return a specific object when an error occurs.
 
@@ -246,4 +246,4 @@ For example, set it to return the response page `/static/error.html` when the HT
 
 Now, instead of displaying detailed information to the user, the custom HTML file will be displayed.
 
-![](error.html.png)
+![](images/blog/aws/signed-cookie/error.html.png)
