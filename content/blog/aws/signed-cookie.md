@@ -251,6 +251,4 @@ CloudFront는 에러 발생시 특정 객체를 반환하도록 '오류 페이�
 
 이제 사용자에게 자세한 정보가 표기 되지 않고 커스텀 html 파일이 표기됩니다.
 
-{{ $image := resources.Get "images/error.html.png" }}
-![](images/error.html.png)
-![](error.html.png)
+<image src="/images/blog/aws/signed-cookie/error.html.png"/>
