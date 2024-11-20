@@ -21,7 +21,7 @@ S3 URL 보안조치에는 세가지 방법이 존재합니다.
 - Signed Cookie (CloudFront)
   - CloudFront를 통해 여러 리소스에 대해 쿠키를 통해 접근 제어
 
-Pre-signed URL은 클라이언트가 서버를 거치지 않고 S3로 직접 파일을 업로드할 수 있도록 할 때, 자주 사용됩니다. 서버는 클라이언트에게 Pre-signed URL을 생성해 제공하고, 클라이언트는 이
+Pre-signed URL은 클라이언트가 서���를 거치지 않고 S3로 직접 파일을 업로드할 수 있도록 할 때, 자주 사용됩니다. 서버는 클라이언트에게 Pre-signed URL을 생성해 제공하고, 클라이언트는 이
 URL을 통해 지정된 시간 동안 S3에 파일을 안전하게 업로드할 수 있습니다.
 
 **::Singed URL과 Cookie의 비교에서는 Signed Cookie를 선택하였습니다.::** Signed URL은 단일 객체에 대한 접근을 허용합니다. 웹사이트에서는 다양한 리소스를 가지고 있는데 매번
@@ -151,11 +151,11 @@ Cookie:CloudFront-Policy={Value};CloudFront-Signature={Value};CloudFront-Key-Pai
 
 서명된 URL 로 접근을 해보면 `sample.png` 가 잘 보이는 것을 확인할 수 있습니다.
 
-![](images/blog/aws/signed-cookie/sample.png)
+<image src="images/blog/aws/signed-cookie/sample.png"/>
 
 10초 이후 새로고침 하는 경우 서명된 URL이 만료됨으로 `Access denied` 가 발생합니다.
 
-![](images/blog/aws/signed-cookie/access_denied.png)
+<image src="images/blog/aws/signed-cookie/access_denied.png"/>
 
 ### 서버 적용
 
@@ -224,7 +224,7 @@ CloudFront URL에는 이제 Signed Cookie로 접근해야하지만 여전히 S3 
 
 쿠키 없이 URL에 접속시 아래 화면이 발생합니다. 이는 사용자에게 필요한 화면이 아니므로 다른 화면으로 교체해줄 필요가 있습니다.
 
-![](images/blog/aws/signed-cookie/missing_key.png)
+<image src="images/blog/aws/signed-cookie/missing_key.png"/>
 
 CloudFront는 에러 발생시 특정 객체를 반환하도록 '오류 페이지' 설정을 제공합니다.
 
@@ -251,4 +251,4 @@ CloudFront는 에러 발생시 특정 객체를 반환하도록 '오류 페이�
 
 이제 사용자에게 자세한 정보가 표기 되지 않고 커스텀 html 파일이 표기됩니다.
 
-<image src="/images/blog/aws/signed-cookie/error.html.png"/>
+<image src="images/blog/aws/signed-cookie/error.html.png"/>
