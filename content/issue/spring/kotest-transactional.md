@@ -6,7 +6,7 @@ tags:
   - kotlin
   - spring
   - kotest
-summary: ""
+summary: "Kotest와 @DataJpaTest 사용 시 발생하는 트랜잭션 롤백 문제와 해결 방법을 설명합니다."
 ---
 
 ## 문제
