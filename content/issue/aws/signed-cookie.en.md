@@ -6,6 +6,7 @@ tags:
   - aws
   - s3
 summary: "Learn about secure access methods for content hosted on AWS S3. We compare different security approaches like Pre-signed URLs, Signed URLs, and Signed Cookies, with a focus on using CloudFront Signed Cookies for efficient access control across multiple resources. We'll walk through a practical implementation of Signed Cookies for websites that need to serve multiple secure resources."
+weight: 2
 ---
 
 ## The Problem

@@ -7,6 +7,7 @@ tags:
   - ec2
   - alb
 summary: "Learn how to safely transition from *.sample.io to *.sample.com domain using redirection. We'll walk through the complete process of setting up domain redirection using AWS Route 53 and Application Load Balancer (ALB), ensuring a seamless migration without impacting user experience. This guide specifically focuses on implementing domain redirection with ALB for services with multiple subdomains, including real-world application examples."
+weight: 1
 ---
 
 ## The Challenge
