@@ -152,11 +152,11 @@ Cookie:CloudFront-Policy={Value};CloudFront-Signature={Value};CloudFront-Key-Pai
 
 서명된 URL 로 접근을 해보면 `sample.png` 가 잘 보이는 것을 확인할 수 있습니다.
 
-<image src="/images/blog/aws/signed-cookie/sample.png"/>
+<image src="/images/issue/aws/signed-cookie/sample.png"/>
 
 10초 이후 새로고침 하는 경우 서명된 URL이 만료됨으로 `Access denied` 가 발생합니다.
 
-<image src="/images/blog/aws/signed-cookie/access_denied.png"/>
+<image src="/images/issue/aws/signed-cookie/access_denied.png"/>
 
 ### 서버 적용
 
@@ -225,7 +225,7 @@ CloudFront URL에는 이제 Signed Cookie로 접근해야하지만 여전히 S3 
 
 쿠키 없이 URL에 접속시 아래 화면이 발생합니다. 이는 사용자에게 필요한 화면이 아니므로 다른 화면으로 교체해줄 필요가 있습니다.
 
-<image src="/images/blog/aws/signed-cookie/missing_key.png"/>
+<image src="/images/issue/aws/signed-cookie/missing_key.png"/>
 
 CloudFront는 에러 발생시 특정 객체를 반환하도록 '오류 페이지' 설정을 제공합니다.
 
@@ -252,4 +252,4 @@ CloudFront는 에러 발생시 특정 객체를 반환하도록 '오류 페이�
 
 이제 사용자에게 자세한 정보가 표기 되지 않고 커스텀 html 파일이 표기됩니다.
 
-<image src="/images/blog/aws/signed-cookie/error.html.png"/>
+<image src="/images/issue/aws/signed-cookie/error.html.png"/>
