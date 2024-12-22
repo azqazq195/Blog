@@ -50,6 +50,7 @@ sudo ./svc.sh install ec2-user
 
 # Then you start your new service depending on what you get from previous step
 sudo systemctl start actions.runner.YourOrg-OrRepo.runner-1.service
+sudo systemctl restart actions.runner.enterprises-WeDataLab.worker-3.service
 
 # You should see your firt runner in your github repos or Org
 ```
