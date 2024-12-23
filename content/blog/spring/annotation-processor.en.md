@@ -6,6 +6,7 @@ tags:
   - spring
   - java
 summary: ""
+weight: 1
 ---
 
 Today, we'll look at how to utilize Java's Annotation Processor functionality. By adding annotations, you can add specific functionality at desired points. A notable example is `lombok`, which helps create `getters`, `setters`, and more using this feature.

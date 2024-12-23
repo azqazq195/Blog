@@ -6,6 +6,7 @@ tags:
   - spring
   - java
 summary: ""
+weight: 1
 ---
 
 오늘은 자바의 Annotation Processor 기능을 활용하는 방법에 대해 살펴보겠습니다. Annotation을 붙임으로써 원하는 시점에 특정 기능을 추가할 수 있습니다. 대표적으로 `lombok`도 이를 활용하여 `getter`, `setter` 등을 구성할 수 있게 도움을 줍니다.
