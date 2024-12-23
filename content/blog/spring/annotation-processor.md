@@ -5,7 +5,7 @@ date: 2024-12-22
 tags:
   - spring
   - java
-summary: ""
+summary: "자바의 Annotation Processor 기능을 활용하여 컴파일 시점에 코드를 검증하고 생성하는 방법을 설명합니다. 특히 Enum 클래스의 이름 규칙을 강제하는 실제 예제를 통해 Annotation Processor의 구현과 설정 방법을 다룹니다."
 weight: 1
 ---
 

@@ -4,7 +4,7 @@ type: blog
 date: 2024-12-02
 tags:
   - aws
-summary: ""
+summary: "AWS IAM Identity Center를 활용하여 보안 모범 사례를 준수하는 IAM 관리 계정을 생성하는 방법을 설명합니다. 임시 보안 인증과 중앙 집중식 관리의 장점을 살펴보고, 실제 구성 단계를 상세히 안내합니다."
 weight: 1
 ---
 

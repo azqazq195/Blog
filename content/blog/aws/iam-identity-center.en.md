@@ -4,7 +4,7 @@ type: blog
 date: 2024-12-02
 tags:
   - aws
-summary: ""
+summary: "Learn how to create an IAM management account following security best practices using AWS IAM Identity Center. We explore the benefits of temporary security credentials and centralized management, with detailed guidance on the implementation steps."
 weight: 1
 ---
 
