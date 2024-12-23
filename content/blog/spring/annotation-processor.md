@@ -309,7 +309,7 @@ Annotation Processor 코드를 미리 컴파일하여 JAR 파일 형태로 제�
 라이브러리로 제공하고 싶었지만, 아직 사내에 이를 관리할 Maven Repository나 배포 시스템이 구축되지 않은 상황입니다.
 사내 Maven Repository를 조만간 도입할 예정이기 때문에 현재로서는 CI에서 `compileJava` 이후 `build`를 명시적으로 실행하는 방식으로 문제를 우회할 예정입니다.
 
-## 멀티 모듈 구성
+## 멀티 모듈 구성[^3]
 
 ### 1. 모듈 생성
 
@@ -456,3 +456,4 @@ BOOT-INF/lib/processor-0.0.1-SNAPSHOT.jar # <-- procesor 모듈
 
 [^1]: https://github.com/azqazq195/blog-code-example/tree/master/spring/annotationprocessor/enumnamepattern
 [^2]: https://github.com/google/auto/tree/main/service
+[^3]: https://github.com/azqazq195/blog-code-example/tree/master/spring/annotationprocessor/enumnamepattern-multi-module

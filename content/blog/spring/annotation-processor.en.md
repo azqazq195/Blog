@@ -308,7 +308,7 @@ Introducing multi-module configuration could complicate the codebase and confuse
 While we wanted to provide it as a library, we don't yet have a Maven Repository or deployment system in place to manage it.
 Since we plan to introduce an internal Maven Repository soon, we're currently working around the issue by explicitly running `build` after `compileJava` in CI.
 
-## Multi-Module Configuration
+## Multi-Module Configuration[^3]
 
 ### 1. Create Module
 
@@ -455,5 +455,4 @@ BOOT-INF/lib/processor-0.0.1-SNAPSHOT.jar # <-- processor module
 
 [^1]: https://github.com/azqazq195/blog-code-example/tree/master/spring/annotationprocessor/enumnamepattern
 [^2]: https://github.com/google/auto/tree/main/service
-
-</rewritten_file>
+[^3]: https://github.com/azqazq195/blog-code-example/tree/master/spring/annotationprocessor/enumnamepattern-multi-module
