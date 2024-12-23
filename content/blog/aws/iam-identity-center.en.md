@@ -166,4 +166,3 @@ In this post, we covered IAM Identity Center activation and basic user creation 
 
 [^4]: https://aws.amazon.com/ko/iam/identity-center/faqs/
 
-</rewritten_file>
