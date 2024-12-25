@@ -5,7 +5,7 @@ date: 2024-12-22
 tags:
   - spring
   - java
-summary: ""
+summary: "This blog post explores using Java’s Annotation Processor to enforce specific naming conventions for Enums at compile time, enhancing code consistency and reducing errors. It covers the setup, implementation, and troubleshooting steps necessary for integrating Annotation Processors into Java projects, emphasizing solutions for common build challenges."
 weight: 1
 ---
 
