@@ -5,7 +5,7 @@ date: 2024-11-02
 tags:
   - aws
   - s3
-summary: 'AWS S3에서 호스팅되는 콘텐츠에 대한 보안 접근 방법을 소개합니다. Pre-signed URL, Signed URL, Signed Cookie 등 다양한 보안 방식의 특징을 비교하고, 여러 리소스에 대한 효율적인 접근 제어가 필요한 상황에서 CloudFront Signed Cookie를 활용하는 방법을 상세히 설명합니다. 특히 다수의 보안 리소스를 제공해야 하는 웹사이트에서 Signed Cookie를 구현하는 실제 사례를 다룹니다.'
+summary: "AWS S3에서 호스팅되는 콘텐츠에 대한 보안 접근 방법을 소개합니다. Pre-signed URL, Signed URL, Signed Cookie 등 다양한 보안 방식의 특징을 비교하고, 여러 리소스에 대한 효율적인 접근 제어가 필요한 상황에서 CloudFront Signed Cookie를 활용하는 방법을 상세히 설명합니다. 특히 다수의 보안 리소스를 제공해야 하는 웹사이트에서 Signed Cookie를 구현하는 실제 사례를 다룹니다."
 weight: 2
 ---
 
